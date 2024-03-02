@@ -1,0 +1,36 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    #annotation-controls {
+      position: fixed;
+      display: flex; 
+      top: 0.5em;
+      left: 0.5em;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.5em; 
+      background-color: #fff;
+      border: 1px solid #ccc; 
+      z-index: 10000; 
+    }
+    .control-elements {
+      text-align: center; 
+      margin: 0 1px; 
+      font-size: 20px;
+      padding: 5px;
+    }
+
+    #open {
+      display: none;
+    }
+
+  </style>
+</head>
+
+<div id="annotation-controls">
+  <input class="control-elements" type="color" id="color" value="#ff0000">
+  <button class="control-elements" id="clear"><i class="fa-solid fa-eraser"></i></button>
+  <button class="control-elements" id="save"><i class="fa-solid fa-floppy-disk"></i></button>
+  <button class="control-elements" id="close"><i class="fa-solid fa-xmark"></i></button>
+  <button id="open"><i class="fa-solid fa-expand"></i></button>
+</div>

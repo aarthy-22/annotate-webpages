@@ -1,0 +1,44 @@
+{
+    "manifest_version": 3,
+    "name": "Draw&Annotate",
+    "description": "Draw, write and annotate any webpage",
+    "version": "1.0",
+    "icons": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_icon": {
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["annotation-controls.html"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "permissions": ["scripting", "activeTab", "storage", "unlimitedStorage"],
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+B",
+          "mac": "Command+B"
+        }
+      }
+    }
+  }
